@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.conf import settings
+from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Student
@@ -66,5 +68,15 @@ def results(request):
         student.current_round = round_details[student.current_round]
     context_data = {
         'students': students,
+        'result_status': settings.SHOW_RESULTS,
     }
     return render(request, 'results.html', context_data)
+
+
+@login_required
+def set_result_status(request):
+    if settings.SHOW_RESULTS:
+        settings.SHOW_RESULTS = False
+    else:
+        settings.SHOW_RESULTS = True
+    return redirect('/dashboard')

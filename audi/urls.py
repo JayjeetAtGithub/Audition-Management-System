@@ -58,4 +58,10 @@ urlpatterns = [
         views.stop,
         name="stop"
     ),
+    path(
+        'set_result_status/',
+        views.set_result_status,
+        name="set_result_status"
+    ),
 ]
+

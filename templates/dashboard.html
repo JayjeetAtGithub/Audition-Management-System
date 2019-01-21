@@ -26,6 +26,11 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <form method="POST" action="/set_result_status/">
+        {% csrf_token %}
+        <button class="btn btn-primary btn-sm">Release/Hide Results</button>
+    </form>
 </div>
 
 {% endblock %}
