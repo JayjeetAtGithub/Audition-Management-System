@@ -3,7 +3,7 @@ from .models import FinalPi, Student, TaskRoundOne, TaskRoundTwo, GroupDiscussio
 
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'current_round', 'year', 'dept')
+    list_display = ('name', 'stopped', 'current_round', 'year', 'dept')
 
 
 admin.site.register(Student, StudentAdmin)
