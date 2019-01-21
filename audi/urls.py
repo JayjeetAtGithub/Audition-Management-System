@@ -4,7 +4,10 @@ from django.urls import path
 from core import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path(
+        'admin/',
+        admin.site.urls
+    ),
     path(
         'admin/password_reset/',
         auth_views.PasswordResetView.as_view(),
@@ -25,7 +28,19 @@ urlpatterns = [
         auth_views.PasswordResetCompleteView.as_view(),
         name='password_reset_complete',
     ),
-
-    path('', views.index, name="index"),
+    path(
+        '',
+        views.index,
+        name="index"
+    ),
+    path(
+        'dashboard/',
+        views.dashboard,
+        name="dashboard"
+    ),
+    path(
+        'profile/<int:id>',
+        views.profile,
+        name="profile"
+    ),
 ]
-

@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    {% if messages %}
+    <ul style="list-style:none;" class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="alert alert-danger" {% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <br />
+    <div class="jumbotron">
+        <div class="container">
+            <h2>Student Details</h2>
+            <h5>Name : {{ student_details.name }}</h5>
+            <h5>Year : {{ student_details.year }}</h5>
+            <h5>Department : {{ student_details.dept }}</h5>
+            <h5>Current Round : {{ student_details.current_round }} </h5>
+        </div>
+    </div>
+
+    <!--pen paper round-->
+    <div class="card">
+        <div class="card-header">
+            Pen Paper Round
+        </div>
+        <div class="card-body">
+
+            <h5><strong>PI Taken By :</strong> {{ student_details.pen_paper_round.pi_taken_by }}</h5>
+            <h5><strong>PI Review :</strong> {{ student_details.pen_paper_round.pi_review }}</h5>
+            <h5><strong>PI Task Given :</strong> {{ student_details.pen_paper_round.pi_task }}</h5>
+        </div>
+    </div>
+    <!--pen paper round-->
+
+    <br />
+
+    <!--task round one-->
+    <div class="card">
+        <div class="card-header">
+            Task Round 1
+        </div>
+        <div class="card-body">
+
+            <h5><strong>Task Description :</strong> {{ student_details.task_round_one.task_desc }}</h5>
+            <h5><strong>Task Given By :</strong> {{ student_details.task_round_one.task_given_by }}</h5>
+            <h5><strong>Task Deadline :</strong> {{ student_details.task_round_one.task_submission_date }}</h5>
+            <h5><strong>Task Review :</strong> {{ student_details.task_round_one.task_review }}</h5>
+            <h5><strong>Task Done :</strong> {{ student_details.task_round_one.task_done }}</h5>
+
+        </div>
+    </div>
+    <!--task round one-->
+
+    <br />
+
+    <!-- task round two-->
+    <div class="card">
+        <div class="card-header">
+            Task Round 2
+        </div>
+        <div class="card-body">
+
+            <h5><strong>Task Description :</strong> {{ student_details.task_round_two.task_desc }}</h5>
+            <h5><strong>Task Given By :</strong> {{ student_details.task_round_two.task_given_by }}</h5>
+            <h5><strong>Task Deadline :</strong> {{ student_details.task_round_two.task_submission_date }}</h5>
+            <h5><strong>Task Review :</strong> {{ student_details.task_round_two.task_review }}</h5>
+            <h5><strong>Task Done :</strong> {{ student_details.task_round_two.task_done }}</h5>
+
+        </div>
+    </div>
+    <!--task round two-->
+
+    <br />
+
+    <!--group discussion round-->
+    <div class="card">
+        <div class="card-header">
+            Group Discussion Round
+        </div>
+        <div class="card-body">
+
+            <h5><strong>GD Taken By :</strong> {{ student_details.gd_round.gd_taken_by }}</h5>
+            <h5><strong>GD Review :</strong> {{ student_details.gd_round.gd_review }}</h5>
+        </div>
+    </div>
+    <!--group discussion round-->
+
+    <br />
+
+    <!--final pi-->
+    <div class="card">
+        <div class="card-header">
+            Final Personal Interview
+        </div>
+        <div class="card-body">
+
+            <h5><strong>PI Taken By :</strong> {{ student_details.final_pi.pi_taken_by }}</h5>
+            <h5><strong>PI Review :</strong> {{ student_details.final_pi.pi_review }}</h5>
+        </div>
+    </div>
+    <!--final pi-->
+
+    <br />
+
+    <!--promote button-->
+    <form method="POST" action="/profile/{{ student_details.id }}">
+        {% csrf_token %}
+        <button class="btn btn-success btn-lg">Promote To Next Round</button>
+    </form>
+</div>
+
+{% endblock %}
