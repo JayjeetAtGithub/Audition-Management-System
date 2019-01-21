@@ -43,4 +43,19 @@ urlpatterns = [
         views.profile,
         name="profile"
     ),
+    path(
+        'results/',
+        views.results,
+        name="results"
+    ),
+    path(
+        'profile/<int:id>/promote',
+        views.promote,
+        name="promote"
+    ),
+    path(
+        'profile/<int:id>/stop',
+        views.stop,
+        name="stop"
+    ),
 ]
