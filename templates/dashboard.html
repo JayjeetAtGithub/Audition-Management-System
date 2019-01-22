@@ -10,19 +10,19 @@
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Current Round</th>
+                <th scope="col">Stopped</th>
                 <th scope="col">View</th>
             </tr>
         </thead>
         <tbody>
             {% for student in students %}
-            {% if not student.stopped %}
             <tr>
                 <th scope="row">{{ student.id }}</th>
                 <td>{{ student.name }}</td>
                 <td>{{ student.current_round }}</td>
+                <td>{{ student.stopped }}</td>
                 <td><a href="/profile/{{ student.id }}" class="btn btn-primary btn-sm">View Profile</a></td>
             </tr>
-            {% endif %}
             {% endfor %}
         </tbody>
     </table>

@@ -110,15 +110,24 @@
     <!--promote button-->
     <form method="POST" action="/profile/{{ student_details.id }}/promote">
         {% csrf_token %}
-        <button class="btn btn-success btn-lg">Promote To Next Round</button>
+        <button class="btn btn-success btn-sm">Promote To Next Round</button>
     </form>
 
 
     <!--stop button-->
     <form method="POST" action="/profile/{{ student_details.id }}/stop">
         {% csrf_token %}
-        <button class="btn btn-danger btn-lg">Stop Auditioning</button>
+        <button class="btn btn-danger btn-sm">Stop Auditioning</button>
     </form>
+
+
+    <!--resume button-->
+    <form method="POST" action="/profile/{{ student_details.id }}/resume">
+        {% csrf_token %}
+        <button class="btn btn-warning btn-sm">Resume Auditioning</button>
+    </form>
+
+
 </div>
 
 {% endblock %}

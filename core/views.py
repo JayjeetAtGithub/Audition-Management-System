@@ -62,6 +62,15 @@ def stop(request, id):
         return redirect('/dashboard')
 
 
+@login_required
+def resume(request, id):
+    if request.method == 'POST':
+        student_details = Student.objects.filter(id=id).first()
+        student_details.stopped = False
+        student_details.save()
+        return redirect('/dashboard')
+
+
 def results(request):
     students = Student.objects.all()
     for student in students:

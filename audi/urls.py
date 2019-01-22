@@ -59,9 +59,13 @@ urlpatterns = [
         name="stop"
     ),
     path(
+        'profile/<int:id>/resume',
+        views.resume,
+        name="resume"
+    ),
+    path(
         'set_result_status/',
         views.set_result_status,
         name="set_result_status"
     ),
 ]
-
