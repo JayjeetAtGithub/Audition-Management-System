@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import FinalPi, Student, TaskRoundOne, TaskRoundTwo, GroupDiscussionRound, PenPaperRound
+from .models import FinalPi, Student, TaskRoundOne, TaskRoundTwo, GroupDiscussionRound, PenPaperRound, AppConfig
 
 
 class StudentAdmin(admin.ModelAdmin):
@@ -12,3 +12,4 @@ admin.site.register(TaskRoundTwo)
 admin.site.register(GroupDiscussionRound)
 admin.site.register(PenPaperRound)
 admin.site.register(FinalPi)
+admin.site.register(AppConfig)

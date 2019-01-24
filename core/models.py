@@ -74,3 +74,10 @@ class Student(models.Model):
     def __str__(self):
         return self.name
 
+
+class AppConfig(models.Model):
+    show_results = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.show_results)
+        

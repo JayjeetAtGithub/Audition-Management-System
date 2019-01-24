@@ -70,8 +70,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'audi.wsgi.application'
 
-# Show Results
-SHOW_RESULTS = False
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
