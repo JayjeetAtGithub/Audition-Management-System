@@ -28,6 +28,10 @@ pip install -r requirements.txt
 
 * Run the development server and navigate to http://localhost:8000
 ```
+python manage.py makemigrations
+
+python manage.py migrate
+
 python manage.py runserver
 
 ```
