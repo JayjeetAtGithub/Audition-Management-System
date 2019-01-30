@@ -36,3 +36,15 @@ python manage.py runserver
 
 ```
 
+## How to Contribute ?
+
+* You may solve an annoying bug 
+* You may add some cool feature
+* You may open any issue or request some nice features
+
+Please head over to [Contribution Guidelines](https://github.com/JayjeetAtGithub/Audition-Management-System/blob/master/CONTRIBUTING.md)
+
+
+## Contributors 
+
+* [Jayjeet Chakraborty](https://github.com/JayjeetAtGithub)
