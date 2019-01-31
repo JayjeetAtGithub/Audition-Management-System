@@ -2,6 +2,8 @@
 
 > This app is basically used to keep track of the audition statistics and reviews , generate results automatically and thus resulting in a hassle free auditioning experience.
 
+[![CircleCI](https://circleci.com/gh/JayjeetAtGithub/Audition-Management-System.svg?style=svg)](https://circleci.com/gh/JayjeetAtGithub/Audition-Management-System)
+
 
 ##  Building From Source 
 
