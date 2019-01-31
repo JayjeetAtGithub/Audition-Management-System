@@ -4,6 +4,8 @@
 
 [![CircleCI](https://circleci.com/gh/JayjeetAtGithub/Audition-Management-System.svg?style=svg)](https://circleci.com/gh/JayjeetAtGithub/Audition-Management-System)
 
+[![gsocheat](https://img.shields.io/badge/GSoC%20Heat-2019-orange.svg)](https://nitdgpos.github.io/gsoc_heat)
+
 
 ##  Building From Source 
 
