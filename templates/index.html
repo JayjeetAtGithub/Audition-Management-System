@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 
+{% load static %}  <!--#added. loading the static folder created to link style.css file-->
+ 
 {% block content %}
+
+<link rel="stylesheet"  href="{%static 'music/style.css' %}" />
 
 <div class="container text-center">
     <br />
-    <h1>Welcome to GNU/Linux User's Group Auditions</h1>
+    <h1>Welcome To GNU/Linux User's Group Auditions</h1>
+    
+    <br /><br/><br/><br/>
+    <a href="/results" class="btn btn-outline-primary">Audition Round Results</a>
     <br />
-    <a href="/results" class="btn btn-primary">Audition Round Results</a>
     <br />
-    <br />
-    <a href="/admin" class="btn btn-primary">Member Login</a>
-
+    <a href="/admin" class="btn btn-outline-primary">Member Login</a>
+    
 </div>
-
 {% endblock %}
