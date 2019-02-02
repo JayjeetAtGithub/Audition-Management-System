@@ -1,0 +1,25 @@
+body{
+    background: white url("images/glug2.jpg");  /* for adding background image*/
+    background-position:0% 30%;
+}
+h1{
+    text-align: center;
+   /* background-color: #FFDE03;      /*text design*/
+   background-image: url("images/backg.jpg");
+    color:#000000;
+    text-shadow: -2px 2px #212121;
+        
+}
+a:visited,a:link{    /*to add effect tolink */
+color: #000000;
+padding: 12px 20px;
+}
+a:hover{
+color: blueviolet;
+background-color:#424242;
+}
+a:active {
+color: bisque;
+background-color: blue;
+text-decoration: underline;
+}
