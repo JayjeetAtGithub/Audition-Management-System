@@ -50,6 +50,12 @@ jobs:
             . venv/bin/activate
             python manage.py test
 
+      -run:
+        name: setup env variables
+        command: |
+            echo 'export SECRET_KEY=abcde' >> $BASH_ENV 
+            echo 'export DEBUG=True' >> $BASH_ENV
+
       - store_artifacts:
           path: test-reports
           destination: test-reports
