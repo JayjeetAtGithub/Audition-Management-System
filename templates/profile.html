@@ -3,14 +3,15 @@
 {% block content %}
 
 <div class="container">
-
-    {% if messages %}
-    <ul style="list-style:none;" class="messages">
-        {% for message in messages %}
-        <li {% if message.tags %} class="alert alert-danger" {% endif %}>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+    <div class="sticky-top">
+        {% if messages %}
+        <ul style="list-style:none;" class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %}class="alert alert-danger text-center" style="width: 92%;" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
 
     <br />
     <div class="jumbotron">
